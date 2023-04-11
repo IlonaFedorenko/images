@@ -7,7 +7,7 @@ import style from './ImageGallery.module.css';
 
 export class ImageGallery extends Component {
   render() {
-    const { images, onImageClick } = this.props;
+    const { images, openModal } = this.props;
     return (
       <ul className={style.imageGallery}>
         {images.map(({ id, webformatURL, largeImageURL }) => (
@@ -15,7 +15,7 @@ export class ImageGallery extends Component {
             key={id}
             webformatURL={webformatURL}
             largeImageURL={largeImageURL}
-            onImageClick={onImageClick}
+            openModal={openModal}
           />
         ))}
       </ul>

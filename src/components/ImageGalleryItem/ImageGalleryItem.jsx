@@ -6,14 +6,14 @@ import style from './ImageGalleryItem.module.css';
 
 export class ImageGalleryItem extends Component {
   render() {
-    const { webformatURL, largeImageURL, onImageClick } = this.props;
+    const { webformatURL, largeImageURL, openModal } = this.props;
     return (
       <li className={style.imageGalleryItem}>
         <img
           src={webformatURL}
           alt=""
           className={style.imageGalleryItemImage}
-          onClick={() => onImageClick(largeImageURL)}
+          onClick={() => openModal(largeImageURL)}
         />
       </li>
     );
