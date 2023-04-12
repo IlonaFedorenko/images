@@ -51,7 +51,8 @@ export const App = () => {
     setLoadMore(false);
   };
 
-  const onloadMore = () => {
+  const onLoadMore = () => {
+    setLoadMore(true);
     setPage(prevPage => prevPage + 1);
     // setPage(prevState => ({ page: prevState.page + 1 }));
   };
@@ -84,7 +85,7 @@ export const App = () => {
 
       {error && <p>something wrong</p>}
 
-      {loadMore && <Button onloadMore={onloadMore} />}
+      {loadMore && <Button onLoadMore={onLoadMore} />}
 
       {showModal && (
         <Modal largeImageURL={largeImageURL} onClose={closeModal} />
