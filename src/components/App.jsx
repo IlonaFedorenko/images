@@ -52,8 +52,8 @@ export const App = () => {
   };
 
   const onloadMore = () => {
-    setIsLoading(true);
     setPage(prevPage => prevPage + 1);
+    // setPage(prevState => ({ page: prevState.page + 1 }));
   };
 
   const openModal = largeImageURL => {
