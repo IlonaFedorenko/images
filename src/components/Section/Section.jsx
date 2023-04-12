@@ -1,13 +1,9 @@
-import { Component } from 'react';
 import PropTypes from 'prop-types';
+import css from './Section.module.css';
 
-import style from './Section.module.css';
-
-export class Section extends Component {
-  render() {
-    return <section className={style.Section}>{this.props.children}</section>;
-  }
-}
+export const Section = ({ children }) => {
+  return <section className={css.Section}>{children}</section>;
+};
 
 Section.propTypes = {
   children: PropTypes.node,
